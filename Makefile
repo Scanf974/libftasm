@@ -6,7 +6,7 @@
 #    By: gbadi <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/03 18:43:39 by gbadi             #+#    #+#              #
-#    Updated: 2015/03/03 22:57:31 by bsautron         ###   ########.fr        #
+#    Updated: 2015/03/03 23:36:27 by bsautron         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC = ft_bzero.s \
 	  ft_tolower.s \
 	  ft_memset.s \
 	  ft_puts.s \
+	  ft_memcpy.s \
 	  ft_strlen.s
 OBJ = $(SRC:%.s=%.o)
 NAME = libfts.a

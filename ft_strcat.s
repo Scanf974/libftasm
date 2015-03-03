@@ -15,13 +15,15 @@ loop1:
 	jmp		loop1			; jump
 
 loop2:
+	cmp		byte [rcx], 0
+	je		end
 	mov		al, byte [rcx]
 	mov		byte [rbx], al
 	inc		rcx
 	inc		rbx
-	cmp		byte [rcx], 0
-	jne		loop2
+	jmp		loop2
 
+end:
 	mov		rax, rdi
 
 	leave

@@ -1,4 +1,3 @@
-
 section	.data
 
 section	.text
@@ -11,11 +10,13 @@ _ft_bzero:
 	mov 	rbx, rdi 		; mov de la chaine dans rbx
 
 loop:
+	cmp		rcx, rsi		; on compare le compteur et la taille rsi
+	je		end
 	mov		byte [rbx], 0	; on prend les byte premier bit de rbx, et les remplace par 0
 	inc		rbx				; on increment le pointeur de la chaine
 	inc		rcx				; i++
-	cmp		rcx, rsi		; on compare le compteur et la taille rsi
-	jne		loop			; si cest pas egale on jmp a loop
+	jmp		loop			; si cest pas egale on jmp a loop
 
+end:
 	leave
 	ret

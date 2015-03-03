@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/03/03 22:59:28 by bsautron         ###   ########.fr       */
+/*   Updated: 2015/03/03 23:48:05 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,18 @@ extern int	ft_tolower(int);
 extern void	ft_puts(char *);
 extern void	*ft_memset(void *, int, size_t);
 extern size_t	ft_strlen(char *);
+extern void		*ft_memcpy(void *, const void *, size_t);
 
 int 		main(void)
 {
 	char	*str;
 
-	str = malloc(6);
-	str[5] = 0;
-	ft_memset(str, '4', 5);
+	str = malloc(50);
+	bzero(str, 50);
+	str[3] = '-';
+	str[4] = '-';
+	str[5] = '-';
+	ft_memcpy(str, "yolo", 4);
 	printf("%s\n", str);
 	return (0);
 }
