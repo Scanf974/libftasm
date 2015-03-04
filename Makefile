@@ -6,16 +6,23 @@
 #    By: gbadi <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/03 18:43:39 by gbadi             #+#    #+#              #
-#    Updated: 2015/03/03 19:58:21 by gbadi            ###   ########.fr        #
+#    Updated: 2015/03/04 20:03:52 by gbadi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = ft_bzero.s \
 	  ft_strcat.s \
 	  ft_isalpha.s \
+	  ft_strcpy.s \
+	  ft_memcpy.s \
+	  ft_cat.s \
+	  ft_strlen.s \
+	  ft_exit.s \
+	  ft_strdup.s \
 	  ft_isdigit.s \
 	  ft_isalnum.s \
 	  ft_puts.s
+
 OBJ = $(SRC:%.s=%.o)
 NAME = libfts.a
 

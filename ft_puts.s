@@ -6,6 +6,9 @@ section .text
 _ft_puts:
 	push	rbp
 	mov		rbp, rsp
+	push	rdx
+	push	rbx
+	push	rsi
 	mov		rbx, rdi
 
 loop:
@@ -20,5 +23,8 @@ loop:
 	jmp		loop
 
 end:
+	pop		rsi
+	pop		rbx
+	pop		rdx
 	leave
 	ret
