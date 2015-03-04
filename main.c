@@ -6,11 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2015/03/04 20:06:35 by gbadi            ###   ########.fr       */
-=======
-/*   Updated: 2015/03/03 23:48:05 by bsautron         ###   ########.fr       */
->>>>>>> d5b86fbf1d570da077c0509d35c15f8386096424
+/*   Updated: 2015/03/04 22:18:21 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,32 +42,23 @@ void		ft_putnbr(int n)
 		ft_putchar(n + 48);
 }
 
-extern void	ft_bzero(void *, size_t);
-extern char	*ft_strcat(char *, char *);
-extern int	ft_isalpha(int);
-extern int	ft_isdigit(int);
-extern int	ft_isascii(int);
-extern int	ft_isprint(int);
-extern int	ft_isalnum(int);
-extern int	ft_toupper(int);
-extern int	ft_tolower(int);
-extern void	ft_puts(char *);
-<<<<<<< HEAD
-extern char	*ft_strcpy(char *, char *);
-extern char *ft_strdup(char *);
-extern void *ft_memcpy(void *, void *, size_t);
-extern void ft_cat(int);
-extern void	ft_exit(int);
-
-int 		main(void)
-{
-	int fd = open("main.c", O_RDONLY);
-	ft_cat(fd);
-	close(fd);
-=======
-extern void	*ft_memset(void *, int, size_t);
+extern void		ft_bzero(void *, size_t);
+extern char		*ft_strcat(char *, char *);
+extern int		ft_isalpha(int);
+extern int		ft_isdigit(int);
+extern int		ft_isascii(int);
+extern int		ft_isprint(int);
+extern int		ft_isalnum(int);
+extern int		ft_toupper(int);
+extern int		ft_tolower(int);
+extern void		ft_puts(char *);
+extern char		*ft_strcpy(char *, char *);
+extern char		*ft_strdup(char *);
+extern void		*ft_memcpy(void *, void *, size_t);
+extern void		ft_cat(int);
+extern void		ft_exit(int);
+extern void		*ft_memset(void *, int, size_t);
 extern size_t	ft_strlen(char *);
-extern void		*ft_memcpy(void *, const void *, size_t);
 
 int 		main(void)
 {
@@ -84,6 +71,5 @@ int 		main(void)
 	str[5] = '-';
 	ft_memcpy(str, "yolo", 4);
 	printf("%s\n", str);
->>>>>>> d5b86fbf1d570da077c0509d35c15f8386096424
 	return (0);
 }
