@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/03/05 21:10:32 by bsautron         ###   ########.fr       */
+/*   Updated: 2015/03/05 23:12:52 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,6 @@ extern size_t	ft_strlen(char *);
 
 int 		main(void)
 {
-	int		fd;
-
-	fd = open("main.c", O_RDONLY);
-	ft_cat(fd);
+	dprintf(1, "%zu\n", ft_strlen("papa ou t'es"));
 	return (0);
 }
