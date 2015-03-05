@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/03/05 23:12:52 by bsautron         ###   ########.fr       */
+/*   Updated: 2015/03/05 23:53:08 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,10 @@ extern size_t	ft_strlen(char *);
 
 int 		main(void)
 {
-	dprintf(1, "%zu\n", ft_strlen("papa ou t'es"));
+	char	buf[10];
+
+	ft_memset(buf, '-', 10);
+	buf[9] = 0;
+	dprintf(1, "%s\n", buf);
 	return (0);
 }
