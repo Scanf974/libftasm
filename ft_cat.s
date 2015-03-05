@@ -1,38 +1,33 @@
-%define BUFF_SIZE 1
+%define BUFF_SIZE 6
 %define SYSCALL(n) 0x2000000 | n
 
 section			.text
-	extern	_malloc
-	extern	_ft_puts
-	extern	_ft_exit
 	global	_ft_cat
 
 _ft_cat:
 	push		rbp
 	mov			rbp, rsp
+	
+	mov			r12, rsp
+	sub			rsp, BUFF_SIZE
 
-; read (rdi, rsi, rdx)
-; rdi = 3
-; rsi = buffer
-; rdx = BUFFSIZE
-
-loop:
-	mov			rax, SYSCALL(3)		; rax = 3
+__read:
+	mov			rsi, r12
 	mov			rdx, BUFF_SIZE
+	mov			rax, SYSCALL(3)
 	syscall
-
-	cmp			eax, 0
+	cmp			rax, 0
 	jle			end
-
-	mov 		rcx, rdi
+	push		rdi
+	mov			rdi, 1
+	mov			rdx, rax
 	mov			rax, SYSCALL(4)
-	mov 		rdi, 1
-	mov 		rdx, 1
 	syscall
-	mov 		rdi, rcx
-
-	jmp 		loop
+	pop			rdi
+	jmp			__read
 
 end:
-	leave
+	mov		rsp, rbp
+	pop		rbp
 	ret
+

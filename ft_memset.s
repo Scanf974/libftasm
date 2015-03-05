@@ -22,3 +22,5 @@ loop:
 end:
 	leave
 	ret
+
+	;rep stosb
