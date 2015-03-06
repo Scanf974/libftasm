@@ -66,6 +66,7 @@ int 		main(void)
 
 	ft_memset(buf, '-', 10);
 	buf[9] = 0;
-	dprintf(1, "%s\n", buf);
+	ft_strlen("iruhf");
+	dprintf(1, "eawef = %s\n", buf);
 	return (0);
 }
