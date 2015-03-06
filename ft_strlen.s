@@ -4,6 +4,8 @@ section .text
 _ft_strlen:
 	push		rbp
 	mov			rbp, rsp
+	cmp			rdi, 0
+	je			null
 	mov			al, 0
 	mov			rcx, -1
 	repne scasb
@@ -11,6 +13,12 @@ _ft_strlen:
 	sub			rcx, 1
 
 	mov			rax, rcx
+	mov			rsp, rbp
+	pop			rbp
+	ret
+
+null:
+	mov			rax, 0
 	mov			rsp, rbp
 	pop			rbp
 	ret

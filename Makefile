@@ -6,7 +6,7 @@
 #    By: gbadi <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/03 18:43:39 by gbadi             #+#    #+#              #
-#    Updated: 2015/03/05 20:16:15 by bsautron         ###   ########.fr        #
+#    Updated: 2015/03/06 23:42:59 by bsautron         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ NAME = libfts.a
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	gcc -c main.c
+	gcc -c -g main.c
 	ld main.o $(OBJ) -macosx_version_min 10.10 -lSystem
 
 %.o: %.s

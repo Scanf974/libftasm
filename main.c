@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/03/05 23:53:08 by bsautron         ###   ########.fr       */
+/*   Updated: 2015/03/07 00:18:50 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ extern int		ft_isprint(int);
 extern int		ft_isalnum(int);
 extern int		ft_toupper(int);
 extern int		ft_tolower(int);
-extern void		ft_puts(char *);
+extern int		ft_puts(char *);
 extern char		*ft_strcpy(char *, char *);
 extern char		*ft_strdup(char *);
 extern void		*ft_memcpy(void *, void *, size_t);
@@ -62,11 +62,10 @@ extern size_t	ft_strlen(char *);
 
 int 		main(void)
 {
-	char	buf[10];
+	int	fd;
 
-	ft_memset(buf, '-', 10);
-	buf[9] = 0;
-	ft_strlen("iruhf");
-	dprintf(1, "eawef = %s\n", buf);
+	fd = open(__FILE__, O_RDONLY);
+	ft_cat(fd);
+	close(fd);
 	return (0);
 }

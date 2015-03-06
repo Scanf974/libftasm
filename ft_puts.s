@@ -6,6 +6,8 @@ section .text
 _ft_puts:
 	push	rbp
 	mov		rbp, rsp
+	cmp		rdi, 0
+	je		exit
 	push	rdx
 	push	rbx
 	push	rsi
@@ -26,5 +28,13 @@ end:
 	pop		rsi
 	pop		rbx
 	pop		rdx
+	mov		rax, 1
 	leave
 	ret
+
+exit:
+	mov		rax, 0
+	mov		rsp, rbp
+	pop		rbp
+	ret
+	
