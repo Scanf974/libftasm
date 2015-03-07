@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/03/07 02:25:41 by bsautron         ###   ########.fr       */
+/*   Updated: 2015/03/07 02:52:27 by gbadi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,15 +60,10 @@ extern void		ft_cat(int);
 extern void		ft_exit(int);
 extern void		*ft_memset(void *, int, size_t);
 extern size_t	ft_strlen(char *);
+extern int		ft_log(char *);
 
 int 			main(void)
 {
-	char	*a;
-	int		i;
-
-	a = (char *)malloc(sizeof(char) * 5);
-	bzero(a, 5);
-	a = ft_memset(a, 'A', 2);
-	dprintf(1, "%s\n", a);
+	ft_log("ok");
 	return (0);
 }

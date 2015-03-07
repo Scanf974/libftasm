@@ -6,7 +6,7 @@
 #    By: gbadi <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/03 18:43:39 by gbadi             #+#    #+#              #
-#    Updated: 2015/03/07 02:19:40 by bsautron         ###   ########.fr        #
+#    Updated: 2015/03/07 02:46:30 by gbadi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRC = ft_bzero.s \
 	  ft_cat.s \
 	  ft_exit.s \
 	  ft_strdup.s \
+	  ft_log.s \
 	  ft_puts.s \
 	  ft_isdigit.s \
 	  ft_isprint.s \
