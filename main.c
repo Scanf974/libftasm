@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/03/07 02:25:41 by bsautron         ###   ########.fr       */
+/*   Updated: 2015/03/07 02:37:31 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ extern void		*ft_memcpy(void *, void *, size_t);
 extern void		ft_cat(int);
 extern void		ft_exit(int);
 extern void		*ft_memset(void *, int, size_t);
+extern void		ft_strsort(char *str);
 extern size_t	ft_strlen(char *);
 
 int 			main(void)
