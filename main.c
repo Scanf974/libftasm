@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/03/07 07:23:01 by bsautron         ###   ########.fr       */
+/*   Updated: 2015/03/07 08:07:15 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,6 +125,22 @@ void		check_bzero(void)
 	printf("[-] Test with NULL [-]\n");
 	ft_bzero(NULL, 0);
 	printf("[-] END OF BZERO [-]\n");
+}
+
+void		        check_memalloc(void)
+{
+	char    *str;
+
+	printf("[-] MEMALLOC [-]\n");
+	str = ft_memalloc(3);
+	printf("[+] str[0] = %d = %c [+]\n", str[0], str[0]);
+	printf("[+] str[1] = %d = %c [+]\n", str[1], str[1]);
+	printf("[+] str[2] = %d = %c [+]\n", str[2], str[2]);
+	str[0] = 'a';
+	str[1] = 'b';
+	printf("[+] str = %s [+]\n", str);
+	str = ft_memalloc(0);
+	printf("[-] END OF MEMALLOC [-]\n");
 }
 
 void		check_strlen(void)
@@ -276,6 +292,8 @@ int			main(void)
 	check_isascii();
 	printf("\n");
 	check_bzero();
+	printf("\n");
+	check_memalloc();
 	printf("\n");
 	check_strlen();
 	printf("\n");
