@@ -6,7 +6,7 @@
 #    By: gbadi <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/03 18:43:39 by gbadi             #+#    #+#              #
-#    Updated: 2015/03/07 02:46:30 by gbadi            ###   ########.fr        #
+#    Updated: 2015/03/07 04:11:14 by bsautron         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,11 @@ SRC = ft_bzero.s \
 	  ft_strcpy.s \
 	  ft_memcpy.s \
 	  ft_cat.s \
+	  ft_filezero.s \
 	  ft_exit.s \
+	  ft_ou.s \
 	  ft_strdup.s \
+	  ft_nebre.s \
 	  ft_log.s \
 	  ft_puts.s \
 	  ft_isdigit.s \
@@ -36,7 +39,8 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	gcc -c -g main.c
-	ld main.o $(OBJ) -macosx_version_min 10.10 -lSystem
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 %.o: %.s
 	nasm -f macho64 $<
