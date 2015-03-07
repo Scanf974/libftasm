@@ -22,9 +22,9 @@ _ft_toupper:
 	push	rbp
 	mov 	rbp, rsp
 
-	cmp		edi, 97
+	cmp		edi, 'a'
 	jl		nope
-	cmp		edi, 123
+	cmp		edi, 'z'
 	jg		nope
 
 	sub		edi, 32

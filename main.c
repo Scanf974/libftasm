@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/03/07 04:23:26 by bsautron         ###   ########.fr       */
+/*   Updated: 2015/03/07 05:41:09 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ void		ft_putnbr(int n)
 
 int 			main(void)
 {
-	dprintf(1, "%s\n", ft_strdup("seifr"));
+	puts(NULL);
 	return (0);
 }

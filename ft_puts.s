@@ -19,6 +19,7 @@
 
 section			.data
 	break		db 		10
+	null		db		"(null)", 0
 
 section 		.text
 	global _ft_puts
@@ -27,7 +28,10 @@ _ft_puts:
 	push	rbp
 	mov		rbp, rsp
 	cmp		rdi, 0
-	je		exit
+	jne		suite
+	mov		rdi, null
+
+suite:
 	push	rdx
 	push	rbx
 	push	rsi
