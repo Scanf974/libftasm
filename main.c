@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/03/07 01:31:21 by bsautron         ###   ########.fr       */
+/*   Updated: 2015/03/07 02:22:45 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ extern int		ft_tolower(int);
 extern int		ft_puts(char *);
 extern char		*ft_strcpy(char *, char *);
 extern char		*ft_strdup(char *);
+extern void		*ft_memalloc(size_t);
 extern void		*ft_memcpy(void *, void *, size_t);
 extern void		ft_cat(int);
 extern void		ft_exit(int);
@@ -62,6 +63,8 @@ extern size_t	ft_strlen(char *);
 
 int 			main(void)
 {
-	dprintf(1, "%s\n", ft_strdup("tg bazil"));
+	char	*a;
+	int		i;
+
 	return (0);
 }

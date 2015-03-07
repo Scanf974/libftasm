@@ -6,7 +6,7 @@
 #    By: gbadi <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/03 18:43:39 by gbadi             #+#    #+#              #
-#    Updated: 2015/03/07 00:28:43 by bsautron         ###   ########.fr        #
+#    Updated: 2015/03/07 02:19:40 by bsautron         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC = ft_bzero.s \
 	  ft_isprint.s \
 	  ft_isascii.s \
 	  ft_isalnum.s \
+	  ft_memalloc.s \
 	  ft_toupper.s \
 	  ft_tolower.s \
 	  ft_memset.s \
