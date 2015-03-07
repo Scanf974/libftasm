@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/03/07 00:18:50 by bsautron         ###   ########.fr       */
+/*   Updated: 2015/03/07 01:31:21 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,8 @@ extern void		ft_exit(int);
 extern void		*ft_memset(void *, int, size_t);
 extern size_t	ft_strlen(char *);
 
-int 		main(void)
+int 			main(void)
 {
-	int	fd;
-
-	fd = open(__FILE__, O_RDONLY);
-	ft_cat(fd);
-	close(fd);
+	dprintf(1, "%s\n", ft_strdup("tg bazil"));
 	return (0);
 }

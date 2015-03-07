@@ -1,26 +1,16 @@
-section .data
-
 section .text
-	global	_ft_memcpy
+	global		_ft_memcpy
 
 _ft_memcpy:
-	push	rbp
-	mov		rbp, rsp
-	xor		rcx, rcx
-	mov		rbx, rdi
-
-loop:
-	cmp		rcx, rdx
-	je		end
-	mov		al, byte [rsi]
-	mov		byte [rbx], al
-	inc		rbx
-	inc		rcx
-	inc		rsi
-	jmp		loop
+	push		rbp
+	mov			rbp, rsp
+	mov			rax, rdi
+	
+	mov			rcx, rdx
+	rep movsb
 
 end:
-	mov		rax, rdi
 
 	leave
 	ret
+

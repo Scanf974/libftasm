@@ -1,6 +1,9 @@
 %define SYSCALL(n) 0x2000000 | n
 
-section .text
+section			.data
+	break		db 		10
+
+section 		.text
 	global _ft_puts
 
 _ft_puts:
@@ -29,6 +32,11 @@ end:
 	pop		rbx
 	pop		rdx
 	mov		rax, 1
+	mov		rax, SYSCALL(4)
+	mov		rdi, 1
+	mov		rsi, break
+	mov		rdx, 1
+	syscall
 	leave
 	ret
 
