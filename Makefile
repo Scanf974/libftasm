@@ -15,15 +15,16 @@
 #                                                                                        #
 ##########################################################################################
 
-
 SRC = ft_bzero.s \
 	  ft_strcat.s \
 	  ft_isalpha.s \
 	  ft_strcpy.s \
 	  ft_memcpy.s \
 	  ft_cat.s \
+	  ft_filezero.s \
 	  ft_exit.s \
 	  ft_strdup.s \
+	  ft_nebre.s \
 	  ft_log.s \
 	  ft_puts.s \
 	  ft_isdigit.s \
@@ -41,8 +42,8 @@ NAME = libfts.a
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@gcc -c -g main.c
-	@ld main.o $(OBJ) -macosx_version_min 10.10 -lSystem
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 	@clear
 	@echo "##########################################################################################"
