@@ -2,26 +2,22 @@ section .data
 
 section .text
 	global	_ft_strcpy
+	extern _ft_strlen
 
 _ft_strcpy:
 	push	rbp
 	mov		rbp, rsp
+
 	mov		rbx, rdi
-	mov		rdx, rsi
+	mov		rdi, rsi
+	call	_ft_strlen
+	mov		rcx, rax
+	inc		rcx
+	mov		rdi, rbx
+	rep movsb
 
-loop:
-	cmp		byte [rdx], 0
-	je		end
-	mov		al, byte [rdx]
-	mov		byte [rbx], al
-	inc		rdx
-	inc		rbx
-	jmp		loop
-
-end:
-	mov		byte [rbx], 0
-	mov		rax, rdi
-
+	mov		rax, rbx
+	
 	leave
 	ret
 

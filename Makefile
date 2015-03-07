@@ -6,7 +6,7 @@
 #    By: gbadi <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/03 18:43:39 by gbadi             #+#    #+#              #
-#    Updated: 2015/03/07 05:01:02 by bsautron         ###   ########.fr        #
+#    Updated: 2015/03/07 05:57:45 by bsautron         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ SRC = ft_bzero.s \
 	  ft_cat.s \
 	  ft_filezero.s \
 	  ft_exit.s \
-	  ft_ou.s \
 	  ft_strdup.s \
 	  ft_nebre.s \
 	  ft_log.s \
@@ -38,8 +37,8 @@ NAME = libfts.a
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 	@echo "          _____                    _____                    _____          "
 	@echo "         /\\    \\                  /\\    \\                  /\\    \\         "
 	@echo "        /::\\    \\                /::\\    \\                /::\\____\\        "
@@ -64,7 +63,7 @@ $(NAME): $(OBJ)
 	@echo "                                                                           "
 
 %.o: %.s
-	@nasm -f macho64 $<
+	nasm -f macho64 $<
 
 clean:
 	rm -f $(OBJ)
