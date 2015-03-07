@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/03/07 02:22:45 by bsautron         ###   ########.fr       */
+/*   Updated: 2015/03/07 02:25:41 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,9 @@ int 			main(void)
 	char	*a;
 	int		i;
 
+	a = (char *)malloc(sizeof(char) * 5);
+	bzero(a, 5);
+	a = ft_memset(a, 'A', 2);
+	dprintf(1, "%s\n", a);
 	return (0);
 }
