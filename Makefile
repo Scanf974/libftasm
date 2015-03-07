@@ -6,10 +6,10 @@
 #    By: gbadi <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/03 18:43:39 by gbadi             #+#    #+#              #
-#    Updated: 2015/03/07 05:57:45 by bsautron         ###   ########.fr        #
+#    Updated: 2015/03/07 06:34:38 by bsautron         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
+#
 SRC = ft_bzero.s \
 	  ft_strcat.s \
 	  ft_isalpha.s \
@@ -39,6 +39,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+	clear
 	@echo "          _____                    _____                    _____          "
 	@echo "         /\\    \\                  /\\    \\                  /\\    \\         "
 	@echo "        /::\\    \\                /::\\    \\                /::\\____\\        "

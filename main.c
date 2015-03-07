@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/03/07 06:30:13 by bsautron         ###   ########.fr       */
+/*   Updated: 2015/03/07 06:49:52 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <string.h>
 #include <fcntl.h>
 #include <unistd.h>
+
 #include "libfts.h"
 
 void		ft_putchar(char c)
@@ -46,10 +47,6 @@ void		ft_putnbr(int n)
 
 int 			main(void)
 {
-	char	dst[] = "wesh guigui";
-
-	dprintf(1, "%s\n", "---");
-	dprintf(1, "%s\n", ft_strcpy(dst, "ouai"));
-	dprintf(1, "%s\n", "+++");
+	puts(NULL);
 	return (0);
 }
